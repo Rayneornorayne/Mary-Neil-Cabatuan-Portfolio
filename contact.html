@@ -24,6 +24,7 @@
         .logo {
             font-size: 24px;
             font-weight: bold;
+            color: #000; /* Black */
         }
 
         nav {
@@ -109,6 +110,29 @@
             background-color: #000; /* Black */
             color: #ffd700; /* Gold */
         }
+
+        footer {
+            background-color: #222; /* Dark background */
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            color: #ffd700; /* Gold */
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #000; /* Black */
+        }
     </style>
 </head>
 <body>
@@ -132,18 +156,19 @@
             <input type="email" id="email" name="email" required>
             <label for="phone">Phone Number:</label>
             <input type="tel" id="phone" name="phone" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-            <button type="submit">Send</button>
-        </form>
+            <label for="message">
+<label for="message">Message:</label>
+<textarea id="message" name="message" rows="4" required></textarea>
+<button type="submit">Send</button>
+</form>
+</div>
+<footer>
+    <p>&copy; 2024 <span style="color: #ffd700;">Mary Neil Cabatuan</span></p>
+    <div class="social-icons">
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
     </div>
-    <footer>
-        <p>&copy; 2024 Mary Neil Cabatuan</p>
-        <div class="social-icons">
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-        </div>
-    </footer>
+</footer>
 </body>
 </html>
