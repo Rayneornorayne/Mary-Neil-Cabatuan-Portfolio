@@ -3,66 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skills</title>
+    <title>Skills - Mary Neil Cabatuan</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
-        /* Add animation styles */
-        .skill-description {
-            display: none;
-            animation: fadeIn 0.5s ease-in-out;
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #f0e68c;
+            background-color: #000;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            animation: fadeIn 1.5s ease-in;
         }
-        
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
+                transform: translateY(-20px);
             }
             to {
                 opacity: 1;
+                transform: translateY(0);
             }
+        }
+
+        header {
+            background: #000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #f0e68c;
+        }
+
+        nav a {
+            color: #f0e68c;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        .skills-section {
+            padding: 50px 20px;
+            color: #f0e68c;
+            max-width: 800px;
+            margin: 0 auto;
+            animation: fadeIn 2s ease-in;
+        }
+
+        .skills-section h1 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .skill-category {
+            margin-bottom: 40px;
+        }
+
+        .skill-category h2 {
+            font-size: 1.8em;
+            color: #ffd700;
+            margin-bottom: 20px;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .skill {
+            background: #333;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            font-size: 1.1em;
+            display: flex;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+
+        .skill:hover {
+            background: #555;
+        }
+
+        .skill img, .skill span {
+            margin-right: 10px;
+        }
+
+        footer {
+            background: #000;
+            color: #f0e68c;
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid #333;
+            margin-top: auto;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            color: #f0e68c;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #ffd700;
         }
     </style>
 </head>
 <body>
+    <header>
+        <div class="logo">Mary Neil Cabatuan</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="experience.html">Experience</a>
+            <a href="skills.html">Skills</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <div class="skills-section">
+        <h1>Skills</h1>
+        
+        <div class="skill-category">
+            <h2>Customer Support</h2>
+            <div class="skills-list">
+                <div class="skill"><span>📞</span>Handling Inquiries</div>
+                <div class="skill"><span>📅</span>Booking Management</div>
+                <div class="skill"><span>🤝</span>Conflict Resolution</div>
+                <div class="skill"><span>😊</span>Customer Satisfaction</div>
+            </div>
+        </div>
 
-    <div class="container">
+        <div class="skill-category">
+            <h2>Administrative Skills</h2>
+            <div class="skills-list">
+                <div class="skill"><span>🖥️</span>Data Entry</div>
+                <div class="skill"><span>📁</span>Document Management</div>
+                <div class="skill"><span>📆</span>Scheduling</div>
+                <div class="skill"><span>🏢</span>Office Management</div>
+            </div>
+        </div>
+
         <div class="skill-category">
             <h2>Technical Skills</h2>
             <div class="skills-list">
-                <div class="skill" onclick="toggleDescription('crm_systems')">
-                    <span>💼</span>CRM Systems
-                </div>
-                <div id="crm_systems" class="skill-description">
-                    <p>Experience with CRM systems to manage customer relationships and streamline business processes.</p>
-                </div>
+                <div class="skill"><span>💻</span>Microsoft Office</div>
+                <div class="skill"><span>🌐</span>Google Workspace</div>
+                <div class="skill"><span>🔧</span>Basic HTML/CSS</div>
+                <div class="skill"><span>📊</span>CRM Systems</div>
             </div>
         </div>
 
         <div class="skill-category">
             <h2>Personal Attributes</h2>
             <div class="skills-list">
-                <div class="skill" onclick="toggleDescription('adaptability')">
-                    <span>⚡</span>Adaptability
-                </div>
-                <div id="adaptability" class="skill-description">
-                    <p>Highly adaptable and able to quickly adjust to new tasks, environments, and challenges. Comfortable in dynamic work settings and capable of embracing change.</p>
-                </div>
-                <div class="skill" onclick="toggleDescription('team_player')">
-                    <span>🤝</span>Team Player
-                </div>
-                <div id="team_player" class="skill-description">
-                    <p>Effective team player with strong collaboration skills, contributing to a positive and productive work environment. Recognizes the value of teamwork in achieving common goals and building strong professional relationships.</p>
-                </div>
-                <div class="skill" onclick="toggleDescription('attention_to_detail')">
-                    <span>🔍</span>Attention to Detail
-                </div>
-                <div id="attention_to_detail" class="skill-description">
-                    <p>Keen attention to detail, ensuring accuracy and thoroughness in all tasks and projects. Meticulous in reviewing work for errors and inconsistencies, with a commitment to delivering high-quality results.</p>
-                </div>
-                <div class="skill" onclick="toggleDescription('problem_solving')">
-                    <span>🧩</span>Problem Solving
-                </div>
-                <div id="problem_solving" class="skill-description">
-                    <p>Strong problem-solving skills, able to analyze situations and develop effective solutions. Utilizes creative thinking and analytical reasoning to address complex challenges, identifying opportunities for improvement and innovation.</p>
-                </div>
+                <div class="skill"><span>⚡</span>Adaptability</div>
+                <div class="skill"><span>🤝</span>Team Player</div>
+                <div class="skill"><span>🔍</span>Attention to Detail</div>
+                <div class="skill"><span>🧩</span>Problem Solving</div>
             </div>
         </div>
     </div>
@@ -74,15 +192,5 @@
             <a href="#"><i class="fab fa-github"></i></a>
         </div>
     </footer>
-    <script>
-        function toggleDescription(id) {
-            const element = document.getElementById(id);
-            if (element.style.display === 'block') {
-                element.style.display = 'none';
-            } else {
-                element.style.display = 'block';
-            }
-        }
-    </script>
 </body>
 </html>
