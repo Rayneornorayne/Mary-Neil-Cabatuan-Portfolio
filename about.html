@@ -46,15 +46,20 @@
         }
 
         .about-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             padding: 50px 20px;
-            text-align: center;
             color: #f0e68c;
         }
 
         .about-section img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
             border-radius: 50%;
-            max-width: 150px;
             margin-bottom: 20px;
+            border: 4px solid #ffd700;
         }
 
         .about-section h1 {
@@ -64,7 +69,9 @@
 
         .about-section p {
             font-size: 1.2em;
-            margin-bottom: 30px;
+            max-width: 600px;
+            text-align: center;
+            line-height: 1.6;
         }
 
         footer {
