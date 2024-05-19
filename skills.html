@@ -95,6 +95,8 @@
             display: flex;
             align-items: center;
             transition: background 0.3s ease;
+            cursor: pointer;
+            position: relative;
         }
 
         .skill:hover {
@@ -103,6 +105,20 @@
 
         .skill img, .skill span {
             margin-right: 10px;
+        }
+
+        .skill-description {
+            display: none;
+            background: #444;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            color: #f0e68c;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .skill-description p {
+            margin: 10px 0;
         }
 
         footer {
@@ -147,40 +163,143 @@
         <div class="skill-category">
             <h2>Customer Support</h2>
             <div class="skills-list">
-                <div class="skill"><span>📞</span>Handling Inquiries</div>
-                <div class="skill"><span>📅</span>Booking Management</div>
-                <div class="skill"><span>🤝</span>Conflict Resolution</div>
-                <div class="skill"><span>😊</span>Customer Satisfaction</div>
+                <div class="skill" onclick="toggleDescription('inquiries')">
+                    <span>📞</span>Handling Inquiries
+                </div>
+                <div id="inquiries" class="skill-description">
+                    <p>Tools Used:</p>
+                    <ul>
+                        <li>Voip</li>
+                        <li>Open Phone</li>
+                        <li>Go High Level</li>
+                        <li>Simple Texting</li>
+                        <li>Jitsi</li>
+                        <li>Zoiper</li>
+                    </ul>
+                </div>
+                <div class="skill" onclick="toggleDescription('booking')">
+                    <span>📅</span>Booking Management
+                </div>
+                <div id="booking" class="skill-description">
+                    <p>Tools Used:</p>
+                    <ul>
+                        <li>Bookeo</li>
+                        <li>Google Calendar</li>
+                    </ul>
+                </div>
+                <div class="skill" onclick="toggleDescription('conflict')">
+                    <span>🤝</span>Conflict Resolution
+                </div>
+                <div id="conflict" class="skill-description">
+                    <p>Excellent conflict resolution skills to maintain customer satisfaction and ensure smooth operations.</p>
+                </div>
+                <div class="skill" onclick="toggleDescription('satisfaction')">
+                    <span>😊</span>Customer Satisfaction
+                </div>
+                <div id="satisfaction" class="skill-description">
+                    <p>Consistently delivering high-quality customer service to ensure customer satisfaction and loyalty.</p>
+                </div>
             </div>
         </div>
 
         <div class="skill-category">
             <h2>Administrative Skills</h2>
             <div class="skills-list">
-                <div class="skill"><span>🖥️</span>Data Entry</div>
-                <div class="skill"><span>📁</span>Document Management</div>
-                <div class="skill"><span>📆</span>Scheduling</div>
-                <div class="skill"><span>🏢</span>Office Management</div>
+                <div class="skill" onclick="toggleDescription('data_entry')">
+                    <span>🖥️</span>Data Entry
+                </div>
+                <div id="data_entry" class="skill-description">
+                    <p>Tools Used:</p>
+                    <ul>
+                        <li>Microsoft Office</li>
+                        <li>Google Suite</li>
+                    </ul>
+                </div>
+                <div class="skill" onclick="toggleDescription('document_management')">
+                    <span>📁</span>Document Management
+                </div>
+                <div id="document_management" class="skill-description">
+                    <p>Efficiently managing and organizing documents to ensure easy access and security.</p>
+                </div>
+                <div class="skill" onclick="toggleDescription('scheduling')">
+                    <span>📆</span>Scheduling
+                </div>
+                <div id="scheduling" class="skill-description">
+                    <p>Effectively scheduling meetings, appointments, and events to optimize time management.</p>
+                </div>
+                <div class="skill" onclick="toggleDescription('office_management')">
+                    <span>🏢</span>Office Management
+                </div>
+                <div id="office_management" class="skill-description">
+                    <p>Ensuring smooth office operations by overseeing administrative tasks and facilities management.</p>
+                </div>
             </div>
         </div>
 
         <div class="skill-category">
             <h2>Technical Skills</h2>
             <div class="skills-list">
-                <div class="skill"><span>💻</span>Microsoft Office</div>
-                <div class="skill"><span>🌐</span>Google Workspace</div>
-                <div class="skill"><span>🔧</span>Basic HTML/CSS</div>
-                <div class="skill"><span>📊</span>CRM Systems</div>
+                <div class="skill" onclick="toggleDescription('microsoft_office')">
+                    <span>💻</span>Microsoft Office
+                </div>
+                <div id="microsoft_office" class="skill-description">
+                    <p>Proficient in using Microsoft Office tools for various administrative and operational tasks.</p>
+                </div>
+                <div class="skill" onclick="toggleDescription('google_workspace')">
+                    <span>🌐</span>Google Workspace
+                </div>
+                <div id="google_workspace" class="skill-description">
+                    <p>Tools Used:</p>
+                    <ul>
+                        <li>Google Docs</li>
+                        <li>Google Sheets</li>
+                        <li>Google Slides</li>
+                        <li>Google Drive</li>
+                    </ul>
+                </div>
+                <div class="skill" onclick="toggleDescription('html_css')">
+                    <span>🔧</span>Basic HTML/CSS
+                </div>
+                <div id="html_css" class="skill-description">
+                    <p>Fundamental knowledge of HTML and CSS for creating and maintaining web content.</p>
+                </div>
+                <div class="skill" onclick="toggleDescription('crm_systems')">
+                    <span>📊</span>CRM Systems
+                </div>
+                <div id="crm_systems" class="
+                <div id="crm_systems" class="skill-description">
+                    <p>Experience with CRM systems to manage customer relationships and streamline business processes.</p>
+                </div>
             </div>
         </div>
 
         <div class="skill-category">
             <h2>Personal Attributes</h2>
             <div class="skills-list">
-                <div class="skill"><span>⚡</span>Adaptability</div>
-                <div class="skill"><span>🤝</span>Team Player</div>
-                <div class="skill"><span>🔍</span>Attention to Detail</div>
-                <div class="skill"><span>🧩</span>Problem Solving</div>
+                <div class="skill" onclick="toggleDescription('adaptability')">
+                    <span>⚡</span>Adaptability
+                </div>
+                <div id="adaptability" class="skill-description">
+                    <p>Highly adaptable and able to quickly adjust to new tasks, environments, and challenges.</p>
+                </div>
+                <div class="skill" onclick="toggleDescription('team_player')">
+                    <span>🤝</span>Team Player
+                </div>
+                <div id="team_player" class="skill-description">
+                    <p>Effective team player with strong collaboration skills, contributing to a positive and productive work environment.</p>
+                </div>
+                <div class="skill" onclick="toggleDescription('attention_to_detail')">
+                    <span>🔍</span>Attention to Detail
+                </div>
+                <div id="attention_to_detail" class="skill-description">
+                    <p>Keen attention to detail, ensuring accuracy and thoroughness in all tasks and projects.</p>
+                </div>
+                <div class="skill" onclick="toggleDescription('problem_solving')">
+                    <span>🧩</span>Problem Solving
+                </div>
+                <div id="problem_solving" class="skill-description">
+                    <p>Strong problem-solving skills, able to analyze situations and develop effective solutions.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -192,5 +311,15 @@
             <a href="#"><i class="fab fa-github"></i></a>
         </div>
     </footer>
+    <script>
+        function toggleDescription(id) {
+            const element = document.getElementById(id);
+            if (element.style.display === 'block') {
+                element.style.display = 'none';
+            } else {
+                element.style.display = 'block';
+            }
+        }
+    </script>
 </body>
 </html>
