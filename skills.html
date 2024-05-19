@@ -69,6 +69,7 @@
             font-size: 2.5em;
             text-align: center;
             margin-bottom: 40px;
+            color: #ffd700;
         }
 
         .skill-category {
@@ -84,41 +85,51 @@
         .skills-list {
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
         }
 
         .skill {
             background: #333;
-            padding: 10px 20px;
+            padding: 20px;
             margin: 10px;
-            border-radius: 5px;
-            font-size: 1.1em;
+            border-radius: 10px;
+            font-size: 1.2em;
             display: flex;
             align-items: center;
-            transition: background 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
             position: relative;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
         }
 
         .skill:hover {
-            background: #555;
+            transform: translateY(-5px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
         }
 
         .skill img, .skill span {
-            margin-right: 10px;
+            margin-right: 20px;
         }
 
         .skill-description {
             display: none;
-            background: #444;
-            padding: 10px;
-            margin-top: 10px;
-            border-radius: 5px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
             color: #f0e68c;
             animation: fadeIn 0.5s ease-in;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            z-index: 100;
         }
 
         .skill-description p {
             margin: 10px 0;
+            font-size: 1.1em;
         }
 
         footer {
@@ -144,7 +155,7 @@
         .social-icons a:hover {
             color: #ffd700;
         }
-    </style>
+  </style>
 </head>
 <body>
     <header>
@@ -167,17 +178,18 @@
                     <span>📞</span>Handling Inquiries
                 </div>
                 <div id="inquiries" class="skill-description">
-                    <p>Tools Used:</p>
+                    <p><strong>Description:</strong> As an experienced executive assistant, I excel in efficiently managing customer inquiries, providing timely responses, and ensuring exceptional customer service experiences across various communication channels.</p>
+                    <p><strong>Tools Used:</strong></p>
                     <ul>
-                        <li>Voip</li>
-                        <li>Open Phone</li>
-                        <li>Go High Level</li>
-                        <li>Simple Texting</li>
-                        <li>Jitsi</li>
-                        <li>Zoiper</li>
+                        <li>VoIP systems for clear and professional voice communication</li>
+                        <li>Open Phone for managing call flows and customer interactions</li>
+                        <li>Go High Level for comprehensive customer relationship management</li>
+                        <li>Simple Texting for SMS marketing and communication</li>
+                        <li>Jitsi for secure video conferencing</li>
+                        <li>Zoiper for VoIP softphone software</li>
                     </ul>
                 </div>
-                <div class="skill" onclick="toggleDescription('booking')">
+    <div class="skill" onclick="toggleDescription('booking')">
                     <span>📅</span>Booking Management
                 </div>
                 <div id="booking" class="skill-description">
@@ -266,8 +278,7 @@
                 <div class="skill" onclick="toggleDescription('crm_systems')">
                     <span>📊</span>CRM Systems
                 </div>
-                <div id="crm_systems" class="
-                <div id="crm_systems" class="skill-description">
+                <div id="crm_systems" class="  <div id="crm_systems" class="skill-description">
                     <p>Experience with CRM systems to manage customer relationships and streamline business processes.</p>
                 </div>
             </div>
@@ -302,7 +313,8 @@
                 </div>
             </div>
         </div>
-    </div>
+        <!-- Add other skill categories here -->
+   </div>
     <footer>
         <p>&copy; 2024 Mary Neil Cabatuan</p>
         <div class="social-icons">
